@@ -18,7 +18,7 @@ public class StanfordBunnyView implements GLEventListener {
 	protected GLCanvas canvas;
 	protected GL2 gl;
 	protected GLU glu;
-	protected GLUT 	glut;
+	protected GLUT glut;
 	protected int width;
 	protected int height;
 	protected float angleX;
@@ -26,7 +26,7 @@ public class StanfordBunnyView implements GLEventListener {
 	protected float angleZ;
 
 	/*コンストラクタ*/
-	StanfordBunnyView(StanfordBunnyView aModle){
+	StanfordBunnyView(StanfordBunnyModel aModle){
 
 	}
 
