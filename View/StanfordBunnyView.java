@@ -1,16 +1,15 @@
 //View
+
 package StanfordBunny.View;
 
-import com.jogamp.opengl.GLEventListener;
-import com.jogamp.opengl.swt.GLCanvas;
-import com.jogamp.opengl.GLAutoDrawable;
-import com.jogamp.opengl.GL2;
-import com.jogamp.opengl.glu.GLU;
-import com.jogamp.opengl.util.gl2.GLUT;
 import StanfordBunny.Controller.StanfordBunnyController;
 import StanfordBunny.Modle.StanfordBunnyModel;
-
-
+import com.jogamp.opengl.GL2;
+import com.jogamp.opengl.GLAutoDrawable;
+import com.jogamp.opengl.GLEventListener;
+import com.jogamp.opengl.glu.GLU;
+import com.jogamp.opengl.swt.GLCanvas;
+import com.jogamp.opengl.util.gl2.GLUT;
 
 public class StanfordBunnyView implements GLEventListener {
 	protected StanfordBunnyModel modle;
@@ -77,11 +76,22 @@ public class StanfordBunnyView implements GLEventListener {
 	/*ここまでアクセサメソッド*/
 
 
+// OpenGLの後すぐdrawableオブジェクトによって、contextが初期化される
 	public void init(GLAutoDrawable aDrawable){
 
 	}
-
+//OpenGL contextが初期化された直後に、drawableオブジェクトによって呼ばれます
 	public void display(GLAutoDrawable aDrawable){
+
+	}
+
+//GLContext（例えばメモリバッファとGLSLプログラム）につきすべてのOpenGL資源の解放を実行するために、リスナーに通知します。
+	public void dispose(GLAutoDrawable aDrawable){
+
+	}
+
+//構成要素が大きさを変更されたあと、最初の塗り直しの間、drawableオブジェクトによって呼ばれます
+	public void reshape(GLAutoDrawable aDrawable, int x, int y, int w, int h){
 
 	}
 
@@ -93,13 +103,6 @@ public class StanfordBunnyView implements GLEventListener {
 
 	}
 
-	public void dispose(GLAutoDrawable aDrawable){
-
-	}
-
-	public void reshape(GLAutoDrawable aDrawable, int x, int y, int w, int h){
-
-	}
 
 	public void reset(){
 
